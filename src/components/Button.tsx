@@ -1,25 +1,35 @@
 import React, { FC } from "react";
 import clsx from "clsx";
 
-type ButtonProps = {
+export type ButtonProps = {
   color: "green" | "red";
+  variant: "filled" | "outline";
 };
 
-const colorToClassName: Record<ButtonProps["color"], string> = {
+const colorToCss: Record<ButtonProps["color"], string> = {
   green: "btn-green",
   red: "btn-red",
+};
+
+const filledToCss: Record<ButtonProps["color"], string> = {
+  green: "btn-green-fill",
+  red: "btn-red-fill",
 };
 
 export const Button: FC<
   ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 > = (props) => {
-  const { children, color, className, ...otherProps } = props;
+  const { children, color, variant, className, ...otherProps } = props;
+
+  const styles = clsx(
+    "btn",
+    colorToCss[color],
+    variant === "filled" && filledToCss[color],
+    className
+  );
 
   return (
-    <button
-      className={clsx("btn", colorToClassName[color], className)}
-      {...otherProps}
-    >
+    <button className={styles} {...otherProps}>
       {children}
     </button>
   );

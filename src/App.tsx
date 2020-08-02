@@ -1,13 +1,19 @@
 import React from "react";
-import { Button } from "./components/Button";
+import { Button, ButtonProps } from "./components/Button";
+
+const buttonProps: ButtonProps[] = [
+  { color: "green", variant: "outline" },
+  { color: "red", variant: "outline" },
+  { color: "green", variant: "filled" },
+  { color: "red", variant: "filled" },
+];
 
 export const App = () => {
   return (
     <>
-      <Button color="red" onClick={() => alert("Oh no!")}>
-        Don't click me!
-      </Button>
-      <Button color="green">Nothing</Button>
+      {buttonProps.map((props) => (
+        <Button {...props}>Click me</Button>
+      ))}
     </>
   );
 };
