@@ -236,6 +236,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Ubuntu",
         "system-ui",
         "-apple-system",
         "BlinkMacSystemFont",
@@ -344,6 +345,7 @@ module.exports = {
       "5xl": "64rem",
       "6xl": "72rem",
       full: "100%",
+      content: "max-content",
       ...breakpoints(theme("screens")),
     }),
     minHeight: {
