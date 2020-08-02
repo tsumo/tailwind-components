@@ -4,8 +4,10 @@ import { Button } from "./components/Button";
 export const App = () => {
   return (
     <>
-      <Button onClick={() => alert("Thanks!")}>Press me</Button>
-      <Button>Press me please</Button>
+      <Button variant="red" onClick={() => alert("Oh no!")}>
+        Don't click me!
+      </Button>
+      <Button variant="green">Nothing</Button>
     </>
   );
 };

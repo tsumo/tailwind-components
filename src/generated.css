@@ -14470,6 +14470,24 @@ video {
   background-color: rgba(47, 133, 90, var(--bg-opacity));
 }
 
+.btn-red {
+  --bg-opacity: 1;
+  background-color: #e53e3e;
+  background-color: rgba(229, 62, 62, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #9b2c2c;
+  border-color: rgba(155, 44, 44, var(--border-opacity));
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+}
+
+.btn-red:hover {
+  --bg-opacity: 1;
+  background-color: #c53030;
+  background-color: rgba(197, 48, 48, var(--bg-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
