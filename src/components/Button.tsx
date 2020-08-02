@@ -2,10 +2,10 @@ import React, { FC } from "react";
 import clsx from "clsx";
 
 type ButtonProps = {
-  variant: "green" | "red";
+  color: "green" | "red";
 };
 
-const variantToClassName: Record<ButtonProps["variant"], string> = {
+const colorToClassName: Record<ButtonProps["color"], string> = {
   green: "btn-green",
   red: "btn-red",
 };
@@ -13,11 +13,11 @@ const variantToClassName: Record<ButtonProps["variant"], string> = {
 export const Button: FC<
   ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
 > = (props) => {
-  const { children, variant, className, ...otherProps } = props;
+  const { children, color, className, ...otherProps } = props;
 
   return (
     <button
-      className={clsx("btn", variantToClassName[variant], className)}
+      className={clsx("btn", colorToClassName[color], className)}
       {...otherProps}
     >
       {children}
