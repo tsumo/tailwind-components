@@ -1,39 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
 
-.btn {
-  @apply m-1 px-3 py-2 border rounded;
-}
+@import "tailwindcss/components";
+@import "./components/button.css";
 
-.btn-green {
-  @apply border-green-800 text-green-600;
-}
-
-.btn-green:hover {
-  @apply bg-green-200;
-}
-
-.btn-green-fill {
-  @apply bg-green-600 text-white;
-}
-
-.btn-green-fill:hover {
-  @apply bg-green-700;
-}
-
-.btn-red {
-  @apply border-red-800 text-red-600;
-}
-
-.btn-red:hover {
-  @apply bg-red-200;
-}
-
-.btn-red-fill {
-  @apply bg-red-600 text-white;
-}
-
-.btn-red-fill:hover {
-  @apply bg-red-700;
-}
+@import "tailwindcss/utilities";
