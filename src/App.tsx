@@ -11,8 +11,10 @@ const buttonProps: ButtonProps[] = [
 export const App = () => {
   return (
     <>
-      {buttonProps.map((props) => (
-        <Button {...props}>Click me</Button>
+      {buttonProps.map((props, i) => (
+        <Button key={i} {...props}>
+          Click me
+        </Button>
       ))}
     </>
   );
