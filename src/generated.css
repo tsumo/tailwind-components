@@ -577,6 +577,10 @@ video {
   height: auto;
 }
 
+button:focus {
+  outline: none;
+}
+
 .container {
   width: 100%;
 }
@@ -615,6 +619,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.btn:focus {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
 .btn-green {
   --border-opacity: 1;
   border-color: #276749;
@@ -625,6 +633,12 @@ video {
 }
 
 .btn-green:hover {
+  --bg-opacity: 1;
+  background-color: #f0fff4;
+  background-color: rgba(240, 255, 244, var(--bg-opacity));
+}
+
+.btn-green:active {
   --bg-opacity: 1;
   background-color: #c6f6d5;
   background-color: rgba(198, 246, 213, var(--bg-opacity));
@@ -645,6 +659,12 @@ video {
   background-color: rgba(47, 133, 90, var(--bg-opacity));
 }
 
+.btn-green-fill:active {
+  --bg-opacity: 1;
+  background-color: #276749;
+  background-color: rgba(39, 103, 73, var(--bg-opacity));
+}
+
 .btn-red {
   --border-opacity: 1;
   border-color: #9b2c2c;
@@ -655,6 +675,12 @@ video {
 }
 
 .btn-red:hover {
+  --bg-opacity: 1;
+  background-color: #fff5f5;
+  background-color: rgba(255, 245, 245, var(--bg-opacity));
+}
+
+.btn-red:active {
   --bg-opacity: 1;
   background-color: #fed7d7;
   background-color: rgba(254, 215, 215, var(--bg-opacity));
@@ -673,6 +699,12 @@ video {
   --bg-opacity: 1;
   background-color: #c53030;
   background-color: rgba(197, 48, 48, var(--bg-opacity));
+}
+
+.btn-red-fill:active {
+  --bg-opacity: 1;
+  background-color: #9b2c2c;
+  background-color: rgba(155, 44, 44, var(--bg-opacity));
 }
 
 .space-y-0 > :not(template) ~ :not(template) {

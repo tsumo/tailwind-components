@@ -2,11 +2,19 @@
   @apply m-1 px-3 py-2 border rounded;
 }
 
+.btn:focus {
+  @apply shadow-outline;
+}
+
 .btn-green {
   @apply border-green-800 text-green-600;
 }
 
 .btn-green:hover {
+  @apply bg-green-100;
+}
+
+.btn-green:active {
   @apply bg-green-200;
 }
 
@@ -18,11 +26,19 @@
   @apply bg-green-700;
 }
 
+.btn-green-fill:active {
+  @apply bg-green-800;
+}
+
 .btn-red {
   @apply border-red-800 text-red-600;
 }
 
 .btn-red:hover {
+  @apply bg-red-100;
+}
+
+.btn-red:active {
   @apply bg-red-200;
 }
 
@@ -32,4 +48,8 @@
 
 .btn-red-fill:hover {
   @apply bg-red-700;
+}
+
+.btn-red-fill:active {
+  @apply bg-red-800;
 }
