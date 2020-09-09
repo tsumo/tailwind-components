@@ -4,18 +4,18 @@ import { Toast } from "./components/Toast";
 import { CircleIcon } from "./icons/Icons";
 
 const buttonProps: ButtonProps[] = [
-  { text: "Click me", color: "green", variant: "outline" },
+  { text: "Click me", color: "green", variant: "outlined" },
   {
     text: "Click me",
     color: "green",
-    variant: "outline",
+    variant: "outlined",
     icon: <CircleIcon />,
   },
-  { text: "Click me", color: "red", variant: "outline" },
+  { text: "Click me", color: "red", variant: "outlined" },
   {
     text: "Click me",
     color: "red",
-    variant: "outline",
+    variant: "outlined",
     icon: <CircleIcon />,
   },
   { text: "Click me", color: "green", variant: "filled" },

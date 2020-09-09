@@ -5,7 +5,7 @@ import { Childfree } from "../utils";
 export type ButtonProps = {
   text: string;
   color: "green" | "red";
-  variant: "filled" | "outline";
+  variant: "filled" | "outlined";
   icon?: ReactElement<React.SVGProps<SVGSVGElement>>;
 } & Childfree<React.ButtonHTMLAttributes<HTMLButtonElement>>;
 
