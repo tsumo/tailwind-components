@@ -1,21 +1,44 @@
 import React from "react";
 import { Button, ButtonProps } from "./components/Button";
 import { Toast } from "./components/Toast";
+import { CircleIcon } from "./icons/Icons";
 
 const buttonProps: ButtonProps[] = [
-  { color: "green", variant: "outline" },
-  { color: "red", variant: "outline" },
-  { color: "green", variant: "filled" },
-  { color: "red", variant: "filled" },
+  { text: "Click me", color: "green", variant: "outline" },
+  {
+    text: "Click me",
+    color: "green",
+    variant: "outline",
+    icon: <CircleIcon />,
+  },
+  { text: "Click me", color: "red", variant: "outline" },
+  {
+    text: "Click me",
+    color: "red",
+    variant: "outline",
+    icon: <CircleIcon />,
+  },
+  { text: "Click me", color: "green", variant: "filled" },
+  {
+    text: "Click me",
+    color: "green",
+    variant: "filled",
+    icon: <CircleIcon />,
+  },
+  { text: "Click me", color: "red", variant: "filled" },
+  {
+    text: "Click me",
+    color: "red",
+    variant: "filled",
+    icon: <CircleIcon />,
+  },
 ];
 
 export const App = () => {
   return (
     <>
       {buttonProps.map((props, i) => (
-        <Button key={i} {...props}>
-          Click me
-        </Button>
+        <Button key={i} {...props} />
       ))}
       <Toast message="example message" color="green" />
       <Toast

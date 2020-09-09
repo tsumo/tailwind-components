@@ -1,10 +1,13 @@
-import React, { FC } from "react";
+import React, { ReactElement } from "react";
 import clsx from "clsx";
+import { Childfree } from "../utils";
 
 export type ButtonProps = {
+  text: string;
   color: "green" | "red";
   variant: "filled" | "outline";
-};
+  icon?: ReactElement<React.SVGProps<SVGSVGElement>>;
+} & Childfree<React.ButtonHTMLAttributes<HTMLButtonElement>>;
 
 const colorToCss: Record<ButtonProps["color"], string> = {
   green: "btn-green",
@@ -16,13 +19,11 @@ const filledToCss: Record<ButtonProps["color"], string> = {
   red: "btn-red-fill",
 };
 
-export const Button: FC<
-  ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>
-> = (props) => {
-  const { children, color, variant, className, ...otherProps } = props;
+export const Button = (props: ButtonProps) => {
+  const { text, color, variant, icon, className, ...otherProps } = props;
 
   const styles = clsx(
-    "btn",
+    "btn space-x-2",
     colorToCss[color],
     variant === "filled" && filledToCss[color],
     className
@@ -30,7 +31,8 @@ export const Button: FC<
 
   return (
     <button className={styles} {...otherProps}>
-      {children}
+      {icon}
+      <span>{text}</span>
     </button>
   );
 };
