@@ -7,6 +7,7 @@ const createIcon = (SvgComponent: FC<React.SVGProps<SVGSVGElement>>) => {
     const { className, ...otherProps } = props;
     return (
       <SvgComponent
+        fill="currentColor"
         className={clsx(className, "inline-block")}
         {...otherProps}
       />
