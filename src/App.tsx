@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import { Button, ButtonProps } from "./components/Button";
+import { TextInput } from "./components/TextInput";
 import { Toast } from "./components/Toast";
 import { CircleIcon } from "./icons/Icons";
 
@@ -31,6 +32,8 @@ export const App = () => {
   return (
     <>
       {buttons}
+      <TextInput className="w-64" />
+      <TextInput icon={<CircleIcon />} className="w-64" />
       <Toast message="example message" color="green" />
       <Toast
         message="extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message extra long message"

@@ -1,0 +1,20 @@
+.inp {
+  @apply rounded m-1 p-2 border w-full;
+}
+
+.inp-icon {
+  @apply pr-10;
+}
+
+.inp:focus {
+  @apply border-2;
+  padding: calc(theme("spacing.2") - 1px);
+}
+
+.inp-icon:focus {
+  padding-right: calc(theme("spacing.10") - 1px);
+}
+
+.inp ~ svg {
+  @apply absolute inset-y-0 right-0 my-auto mr-2;
+}

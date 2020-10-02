@@ -3,5 +3,6 @@
 
 @import "tailwindcss/components";
 @import "./components/button.css";
+@import "./components/text-input.css";
 
 @import "tailwindcss/utilities";

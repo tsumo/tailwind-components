@@ -707,6 +707,37 @@ button:focus {
   background-color: rgba(155, 44, 44, var(--bg-opacity));
 }
 
+.inp {
+  border-radius: 0.25rem;
+  margin: 0.25rem;
+  padding: 0.5rem;
+  border-width: 1px;
+  width: 100%;
+}
+
+.inp-icon {
+  padding-right: 2.5rem;
+}
+
+.inp:focus {
+  border-width: 2px;
+  padding: calc(0.5rem - 1px);
+}
+
+.inp-icon:focus {
+  padding-right: calc(2.5rem - 1px);
+}
+
+.inp ~ svg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.5rem;
+}
+
 .space-y-0 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
